@@ -71,7 +71,25 @@ class _CoffeeHomePageState extends State<CoffeeHomePage> {
           animationDuration: const Duration(milliseconds: 300),
           // when press icon icon's index go in to function and navigate to pages
           onTap: (index) {
-            print(index);
+            switch (index) {
+              case 0:
+                Navigator.pushNamed(context, '/home');
+                break;
+              case 1:
+                Navigator.pushNamed(context, '/favorite');
+                break;
+              case 2:
+                Navigator.pushNamed(context, '/notification');
+                break;
+              case 3:
+                Navigator.pushNamed(context, '/settings');
+                break;
+              default:
+            }
+            setState(() {
+                      print(index); 
+            });
+   
           },
           items: const [
             Icon(
